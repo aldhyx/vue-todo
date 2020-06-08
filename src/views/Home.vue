@@ -8,6 +8,7 @@
     <main>
       <section class="todo-input">
         <input
+          ref="todoItemEdit"
           type="text"
           placeholder="What needs to be done?"
           v-model="newTodo"
@@ -132,7 +133,10 @@ export default {
   },
   methods: {
     addTodo() {
-      if (!this.newTodo) return;
+      if (!this.newTodo) {
+        this.$refs.todoItemEdit.focus();
+        return;
+      }
 
       this.todos.push({
         id: this.idForTodo,
