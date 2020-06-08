@@ -67,7 +67,7 @@
         </div>
         <div>
           <transition name="fade">
-            <button v-if="showClearCompletedButton" @click="clearCompleted">Clear Completed</button>
+            <button v-if="showClearCompletedButton" @click="clearCompleted">Clear</button>
           </transition>
         </div>
       </section>
