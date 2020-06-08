@@ -132,7 +132,7 @@ export default {
     }
   },
   methods: {
-    addTodo() {
+    addTodo(e) {
       if (!this.newTodo) {
         this.$refs.todoItemEdit.focus();
         return;
@@ -147,6 +147,7 @@ export default {
 
       this.newTodo = '';
       this.idForTodo++;
+      e.target.blur();
     },
     removeTodo(index) {
       this.todos.splice(index, 1);
